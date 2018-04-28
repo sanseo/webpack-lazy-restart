@@ -7,15 +7,19 @@ import printMe from './print.js';
 function component() {
     var element = document.createElement('div');
     var btn =document.createElement('button');
+    var a=document.createElement('a');
 
     //lodash ,now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], '');
+    element.innerHTML = _.join(['Hello', 'webpack4.6'], '');
     element.classList.add('hello')
 
     btn.innerHTML='Click me and check the console';
     btn.onclick=printMe;
+    a.href='http://www.baidu.com';
+    a.innerHTML='baidu';
 
     element.appendChild(btn);
+    element.appendChild(a);
     // var myIcon=new Image();
     // myIcon.src=Icon;
     //

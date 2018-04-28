@@ -9,7 +9,8 @@ module.exports = {
     },
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname,'dist')
+        path: path.resolve(__dirname,'dist'),
+        publicPath:'/'
     },
     plugins:[
       new CleanWebpackPlugin(['dist']),
@@ -17,6 +18,10 @@ module.exports = {
           title:'Output Management'
       })
     ],
+    devtool: 'source-map',
+    devServer:{
+        contentBase:'./dist'
+    }
     // module : {
     //     rules : [
     //         {
